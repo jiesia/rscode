@@ -13,6 +13,7 @@ export const SideBar: FC = () => {
           {
             activities.map((activity) => (
               <div
+                key={activity.id}
                 className={styles.activity}
                 onClick={() => setCurrentActivityId(activity.id)}
               >
@@ -29,6 +30,7 @@ export const SideBar: FC = () => {
         {
           activities.map((activity) => (
             <div
+              key={activity.id}
               className={styles.activity_wrapper}
               style={{
                 zIndex: activity.id === currentActivityId ? 1 : 0,
